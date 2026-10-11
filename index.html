@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Collecta Privacy Policy - Norman Solutions</title>
+  <style>
+    body { margin: 0; background: #fafafa; color: #202030; font: 1rem/1.65 system-ui, sans-serif; }
+    main { max-width: 48rem; margin: auto; padding: 2rem 1.25rem 4rem; overflow-wrap: anywhere; }
+    h1, h2 { line-height: 1.25; }
+    h2 { margin-top: 2rem; scroll-margin-top: 1rem; }
+    li { margin-bottom: .75rem; }
+    a { color: #312e81; }
+    nav { padding: 1rem; background: #eeeef8; border-radius: .5rem; }
+    a:focus-visible { outline: 3px solid #312e81; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+<main>
+<nav aria-label="Policy shortcuts">
+  <a href="#retention-and-deletion">Account deletion and retention</a> &middot;
+  <a href="#changes-and-contact">Contact Norman Solutions</a>
+</nav>
+<h1>Collecta Privacy Policy</h1>
+<p>Draft for review — confirm the retention details marked below before publication.</p>
+<p>Last updated: 11 October 2026</p>
+<p>Norman Solutions, based in England, United Kingdom, operates Collecta. This policy explains how we handle personal information when you use Collecta. Contact us at <strong>chris.norman141@gmail.com</strong> with privacy questions or requests.</p>
+<h2 id="information-we-handle">Information we handle</h2>
+<ul><li><strong>Account information:</strong> your email address, account identifier, authentication information, and profile details such as username, display name, bio, and profile picture. Email/password authentication is handled by Supabase. If you choose Google sign-in, Google and Supabase handle authentication and provide the account information needed to sign you in, which may include your email, name, and profile picture.</li>
+<li><strong>Collection information:</strong> collections and items you create, wishlists, collection progress, visit confirmations, achievements, visibility preferences, and location-monitoring settings. Places you add may include names, addresses, and coordinates.</li>
+<li><strong>Photos:</strong> the profile picture you choose is uploaded to cloud storage. Collecta does not upload your entire photo library. Profile pictures are publicly accessible to anyone with their URL.</li>
+<li><strong>Location:</strong> when you press the map location button and grant permission, Collecta accesses your device location to centre the map. If you enable location monitoring, Collecta also accesses precise location in the background, including when the Android app is closed or not in use, to detect visits to eligible collection locations.</li>
+<li><strong>Technical information:</strong> network requests disclose your IP address and request information to the services receiving them. Authentication and hosting services may process operational and security logs. Authentication sessions are retained on your device so you can remain signed in.</li>
+<li><strong>Support correspondence:</strong> information you send when contacting us, including your email address and the content of your request.</li></ul>
+<h2 id="how-we-use-information">How we use information</h2>
+<p>We use information to create and authenticate accounts, save and display collections and wishlists, record progress, manage profiles and privacy settings, display maps, detect eligible visits, provide collection suggestions based on accessible public progress, respond to requests, and protect and maintain the service.</p>
+<p>The reviewed Collecta application has no advertising, payment, or third-party analytics/crash-reporting SDK integrations. Our Supabase backend also contains application diagnostic logs, which can include an account identifier, session identifier, platform, application version, event, error type, and timing information. We do not use device location for advertising.</p>
+<h2 id="background-location-and-visit-detection">Background location and visit detection</h2>
+<p>Location monitoring is optional and disabled by default. Enable it under <strong>Profile &gt; Location monitoring</strong> and grant the required location and notification permissions. On Android, a persistent notification appears while monitoring is active.</p>
+<p>While enabled, Collecta attempts a location check approximately every five minutes. It sends your current latitude and longitude to our Supabase backend to compare your position with eligible places within about 30 metres. These device coordinates are processed for the comparison and are not saved in application database tables as a location history. Hosting infrastructure may process request information separately.</p>
+<p>When a match occurs, we store your account identifier, the matched place identifier, and observation and expiry times. Repeated matches can create a pending visit confirmation. A visit is added to your progress only after you accept it. Matched places and times can reveal where you have been even though raw device coordinates are not saved.</p>
+<p>Visit observations and confirmation records expire after 24 hours and are removed by an hourly cleanup job. Cleanup can be delayed if a scheduled run fails. Accepted progress remains separately as part of your account until it is removed or your account is deleted.</p>
+<p>You can disable monitoring in Collecta, revoke location permission in Android settings, or sign out to stop monitoring. Map browsing remains available without location permission. Location-bearing development diagnostics are disabled in release builds.</p>
+<h2 id="who-receives-information">Who receives information</h2>
+<ul><li><strong>Supabase:</strong> provides authentication, database hosting, and file storage and processes account information, application records, uploaded photos, and location-comparison requests on our behalf.</li>
+<li><strong>Google:</strong> handles sign-in if you choose Google authentication. If you select <strong>Get directions</strong>, Collecta opens an external Google Maps app or website with the destination coordinates; that service handles the resulting interaction under its own privacy policy.</li>
+<li><strong>OpenStreetMap services:</strong> map tiles are requested from OpenStreetMap and place-search text is sent to its Nominatim service. Requests disclose your IP address and the requested map area or search terms. A map area centred on your position may reveal your approximate location.</li>
+<li><strong>Image hosts:</strong> viewing a collection or place image hosted externally sends a request to that host, including your IP address and the image requested.</li>
+<li><strong>Other users and public viewers:</strong> public collections and their items are accessible to other users. New accounts have private progress and achievement settings. You can choose to make these public; existing accounts keep their saved visibility choices. Profile text is available only to you and administrators. New collections default to private, and you can explicitly make them public. Profile pictures are public even if your progress is private. Avoid including sensitive information in public content.</li></ul>
+<p>We may disclose information where legally required or necessary to protect users, investigate misuse, or defend legal rights. Our Supabase project is hosted in Ireland. Other service providers may process information outside the United Kingdom or Ireland. Contact us for information about applicable international-transfer arrangements.</p>
+<h2 id="security">Security</h2>
+<p>Collecta uses HTTPS for configured cloud and map services, authentication, and database access controls intended to restrict access according to ownership and visibility settings. No transmission or storage system is completely secure. Public content can be copied by others, and changing visibility or deleting content cannot remove copies already made by third parties.</p>
+<h2 id="retention-and-deletion">Retention and deletion</h2>
+<p>Account information, profile content, collection records, preferences, and confirmed progress are kept to provide your account and its features. You can edit profile details, remove your profile picture, change progress and achievement visibility, and manage collections and wishlists through the app. Some removal operations may mark records as deleted rather than immediately erase them.</p>
+<p>You can delete your account directly in Collecta under <strong>Profile &gt; Delete account</strong>, after confirming the consequences. This stops location monitoring and attempts immediate deletion. If deletion fails, retry or contact us; some uploaded files may already have been removed.</p>
+<p>To request deletion of your Collecta account and associated personal information outside the app, email <strong>chris.norman141@gmail.com</strong> with the subject <strong>Collecta account deletion</strong>, identifying the email address used for your account. We may ask you to verify account ownership. Do not send your password. Uninstalling the app or signing out does not delete your account.</p>
+<p>We complete account-deletion requests within 28 days after verifying account ownership. Public collections remain available after account deletion.</p>
+<p>When deleting your account, we disconnect retained public collections from your account and rename them Community collection. We remove custom titles, descriptions, cover images, tags, item media, and manually added items. Only places backed by our imported public-provider catalogue remain, with their name, address, and coordinates taken from that catalogue. Tag labels you created are replaced with generic labels. We delete your account, profile, uploaded profile picture, private collections, wishlists, observations, confirmations, progress, achievements, and preferences from the live service. We do not retain deleted account information for additional legal or security purposes.</p>
+<p>Application diagnostic logs and database authentication audit logs are removed after 30 days by hourly cleanup jobs. Account deletion also removes account-linked application logs and matching database authentication audit records. Previously issued access tokens may remain valid until their expiry, but the account and its personal records are removed.</p>
+<p>Our current Supabase plan is Free. Standard dashboard service-log history is available for one day; this is a dashboard access window, not a verified deadline for erasure of every provider-held copy. Supabase&#39;s paid-plan daily backup history is not included in the Free plan.</p>
+<p><strong>To be confirmed before publication:</strong> verify any exported backups, provider-held internal backups and service logs, and their applicable erasure periods. Deletion from the live database does not necessarily remove such copies immediately.</p>
+<p>We retain support and privacy-request emails for 12 months after the request is resolved, then delete them. We remove unnecessary attachments sooner.</p>
+<h2 id="your-choices-and-rights">Your choices and rights</h2>
+<p>You can control optional location and notification permissions through your device settings and use the profile controls described above. Depending on your jurisdiction, you may have rights to access, correct, delete, or obtain a copy of your personal information, restrict or object to processing, and withdraw consent for optional processing. Contact <strong>chris.norman141@gmail.com</strong> to make a request. You may also complain to your local data-protection authority.</p>
+<h2 id="children">Children</h2>
+<p>Collecta currently sets no minimum user age. Parents or guardians can contact <strong>chris.norman141@gmail.com</strong> about a child&#39;s personal information or to request its deletion, subject to appropriate verification.</p>
+<p>New collection/progress/achievement settings are private, map location is user-initiated, and background monitoring is disabled by default and requires an explicit disclosure and permission. Uploaded profile pictures and content you explicitly make public remain public.</p>
+<p><strong>To be confirmed before publication:</strong> the app does not verify age or parental approval. Establish lawful bases, parental consent where required, guardian-request verification, and suitable controls for children&#39;s public content and personalised suggestions before supporting children. The current privacy controls alone do not establish full children&#39;s privacy compliance.</p>
+<h2 id="changes-and-contact">Changes and contact</h2>
+<p>We will update this policy when our practices change and revise the date above. Where required, we will notify you of material changes or request consent. Privacy enquiries and account-deletion requests should be sent to <strong>Norman Solutions</strong> at <strong>chris.norman141@gmail.com</strong>.</p>
+</main>
+</body>
+</html>
